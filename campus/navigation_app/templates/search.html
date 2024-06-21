@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<h1>Search Results</h1>
+<!-- Display search results here -->
+{% for result in results %}
+    <p>{{ result }}</p>
+{% empty %}
+    <p>No results found.</p>
+{% endfor %}
+{% endblock %}
+

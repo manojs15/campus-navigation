@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Favorite Locations{% endblock %}
+
+{% block content %}
+<h1>Favorite Locations</h1>
+<!-- Display user's favorite locations -->
+{% if favorite_locations %}
+    <ul>
+        {% for location in favorite_locations %}
+            <li>{{ location.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No favorite locations saved.</p>
+{% endif %}
+{% endblock %}

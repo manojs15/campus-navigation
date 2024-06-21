@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+<h1>Settings</h1>
+<!-- User settings form -->
+<form method="post">
+    {% csrf_token %}
+    <!-- Add settings fields -->
+    <label>Email:</label>
+    <input type="email" name="email" value="{{ user.email }}" required>
+    <button type="submit">Save Changes</button>
+</form>
+{% endblock %}

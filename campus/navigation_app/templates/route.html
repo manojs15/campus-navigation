@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Route Details{% endblock %}
+
+{% block content %}
+<h1>Route Details</h1>
+<!-- Display route details and directions -->
+<p>From: {{ start_location }}</p>
+<p>To: {{ end_location }}</p>
+<p>Directions:</p>
+<ul>
+    {% for direction in directions %}
+        <li>{{ direction }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
